@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 import { Then } from 'cypress-cucumber-preprocessor/steps'
 import checkTitle from './check/checkTitle'
 
