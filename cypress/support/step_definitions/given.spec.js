@@ -1,6 +1,7 @@
 import { Given } from 'cypress-cucumber-preprocessor/steps'
+import openWebsite from './actions/openWebsite'
 
-const url = 'https://google.com'
-Given('I open Google page', () => {
-  cy.visit(url)
-})
+Given(
+  /^I open the (url|site) "([^"]*)?"$/,
+  openWebsite
+)
