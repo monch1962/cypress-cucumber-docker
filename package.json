@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc report --report cobertura"
   },
   "keywords": [
     "cypress",
@@ -24,7 +24,8 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "mocha-multi-reporters": "^1.1.7"
+    "mocha-multi-reporters": "^1.1.7",
+    "nyc": "^14.1.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false
