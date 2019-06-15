@@ -27,3 +27,8 @@ steps:
 - script: |
     $(npm bin)/cypress run
   displayName: 'Run Cypress/Cucumber tests'
+
+- task: PublishTestResults@2
+  inputs:
+    'testResultsFormat': JUnit
+    'testResultsFiles': results/**/*.xml
