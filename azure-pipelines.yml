@@ -24,6 +24,13 @@ steps:
     npm test
   displayName: 'npm test (including coverage)'
   
+- task: PublishCodeCoverageResults@1
+  inputs: 
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
+  displayName: Publish code coverage results
+  
 - script: |
     $(npm bin)/cypress verify
   displayName: 'Verify Cypress config'
