@@ -1,0 +1,36 @@
+{
+  "name": "cypress-cucumber-docker",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "docker"
+  ],
+  "author": "David Mitchell",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.3.1",
+    "cypress-cucumber-preprocessor": "^1.12.0",
+    "cypress-image-snapshot": "^3.1.1",
+    "cypress-junit-reporter": "^1.3.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false
+  },
+  "cypress-junit-reporter": {
+    "testsuitesTitle": true,
+    "suiteTitleSeparatedBy": ".",
+    "toConsole": true 
+  }
+}
