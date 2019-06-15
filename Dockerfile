@@ -13,4 +13,4 @@ COPY ./cypress/support ./cypress/support
 
 # RUN ["npm", "run", "record:ecs"]
 RUN $(npm bin)/cypress verify
-RUN $(npm bin)/cypress run
+CMD $(npm bin)/cypress run

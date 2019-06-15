@@ -6,10 +6,15 @@
     "pageLoadTimeout": 30000,
     "requestTimeout": 5000,
     "responseTimeout": 30000,
-    "screenshotsFolder": "cypress/screenshots",
-    "videosFolder": "cypress/videos",
+    "screenshotsFolder": "./results/screenshots",
+    "videosFolder": "./results/videos",
     "videoCompression": false,
-    "video": false,
+    "video": true,
     "videoUploadOnPasses": true,
-    "trashAssetsBeforeRuns": true
+    "trashAssetsBeforeRuns": true,
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "./results/test-output-[hash].xml",
+      "toConsole": true
+    }
 }
