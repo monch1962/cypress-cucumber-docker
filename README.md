@@ -1,5 +1,7 @@
 # Cypress-Cucumber-Docker
 
+[![Build Status](https://dev.azure.com/monch1962/monch1962/_apis/build/status/monch1962.cypress-cucumber-docker)](https://dev.azure.com/monch1962/monch1962/_build/latest?definitionId=1)
+
 ## Docker container to run Cucumber tests against Cypress
 
 Note that there is a pre-defined set of Cucumber step files under `./cypress/support/step_definitions`. These are intended to speed up the creation of Cucumber/Gherkin files and reduce the expertise required to do so
