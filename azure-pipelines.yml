@@ -21,6 +21,10 @@ steps:
   displayName: 'npm install and build'
 
 - script: |
+    npm test
+  displayName: 'npm test (including coverage)'
+  
+- script: |
     $(npm bin)/cypress verify
   displayName: 'Verify Cypress config'
 
