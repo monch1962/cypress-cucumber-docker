@@ -9,13 +9,16 @@ A screenshot is taken at the end of each test execution, and a MP4 video is capt
 Results are captured in JUnit format, and written both to file and to the console
 
 ## Instructions
-To build
+To build a container image
+
 `$ docker build . -t ccd`
 
 To run using built-in feature file, with results being written to `./results` directory
+
 `$ docker run -v "$(pwd)/results:/results" ccd:latest`
 
 To run supplying your own feature file/s, assuming they're in `./cypress/integration`
+
 `$ docker run -v "$(pwd)/results:/results" -v "$(pwd)/cypress/integration:/cypress/integration" ccd:latest`
 
 
