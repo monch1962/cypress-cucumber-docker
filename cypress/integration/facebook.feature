@@ -20,3 +20,6 @@ Feature: Facebook
 
   Scenario: Check the submit button is visible
     Then I expect that element "#u_0_15" is visible
+
+  Scenario: pending step - still to be developed
+    Then I expect that a alertbox is not opened

@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
 
-after(() => {
+afterEach(() => {
   cy.screenshot()
 })

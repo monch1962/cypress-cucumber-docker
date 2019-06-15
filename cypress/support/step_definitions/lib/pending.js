@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
 
 module.exports = () => {
-  this.skip()
+  this.pending()
 }
