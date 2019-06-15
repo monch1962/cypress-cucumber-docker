@@ -1,5 +1,7 @@
 import { Then } from 'cypress-cucumber-preprocessor/steps'
+import checkTitle from './check/checkTitle'
 
-Then(`I see {string} in the title`, (title) => {
-  cy.title().should('include', title)
-})
+Then(
+  /^I expect that the title is( not)* "([^"]*)?"$/,
+  checkTitle
+)
