@@ -12,5 +12,7 @@ COPY ./cypress/integration ./cypress/integration
 COPY ./cypress/support ./cypress/support
 
 # RUN ["npm", "run", "record:ecs"]
-RUN $(npm bin)/cypress verify
-CMD $(npm bin)/cypress run
+#RUN $(npm bin)/cypress verify
+RUN npm run cypress-verify
+#CMD $(npm bin)/cypress run
+CMD npm run cypress-run

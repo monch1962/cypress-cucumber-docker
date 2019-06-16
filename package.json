@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc report --report cobertura"
+    "test": "nyc report --report cobertura",
+    "cypress-verify": "cypress verify",
+    "cypress-run": "cypress run"
   },
   "keywords": [
     "cypress",
