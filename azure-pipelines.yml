@@ -25,6 +25,7 @@ steps:
   displayName: 'npm test (including coverage)'
   
 - task: PublishCodeCoverageResults@1
+  continueOnError: true
   inputs: 
     codeCoverageTool: Cobertura
     summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
