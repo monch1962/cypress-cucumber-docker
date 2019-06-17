@@ -10,6 +10,7 @@ import checkSelected from './check/checkSelected'
 import checkElementExists from './check/checkElementExists'
 import pending from './lib/pending'
 import isExisting from './check/isExisting'
+import checkUrl from './check/checkUrl'
 import checkEqualsText from './check/checkEqualsText'
 
 Then(
@@ -80,8 +81,7 @@ Then(
 
 Then(
   /^I expect that the url is( not)* "([^"]*)?"$/,
-  // checkURL
-  pending
+  checkUrl
 )
 
 Then(

@@ -44,5 +44,11 @@ Feature: Facebook
     Given the element ".fwn" matches the text "It's free and always will be."
     Then I expect that element ".fwn" matches the text "It's free and always will be."
 
+  Scenario: Check the URL
+    Given the page url is "https://www.facebook.com/"
+    And the page url is not "https://asdf/asdf/asdf"
+    Then I expect that the url is "https://www.facebook.com/"
+    And I expect that the url is not "https://asdf/asdf/asdf/asdf"
+
   #Scenario: pending step - still to be developed
   #  Then I expect that a alertbox is not opened
