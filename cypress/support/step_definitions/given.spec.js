@@ -3,6 +3,7 @@
 import { Given } from 'cypress-cucumber-preprocessor/steps'
 import openWebsite from './actions/openWebsite'
 import isVisible from './check/isVisible'
+import isEnabled from './check/isEnabled'
 import checkTitle from './check/checkTitle'
 import pending from './lib/pending'
 
@@ -18,8 +19,8 @@ Given(
 
 Given(
   /^the element "([^"]*)?" is( not)* enabled$/,
-  // isEnabled
-  pending
+  isEnabled
+  // pending
 )
 
 Given(
