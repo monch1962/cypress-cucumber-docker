@@ -50,3 +50,20 @@ steps:
 #    docker tag ccd:latest gcr.io/work-test-242205/cypress-cucumber-docker
 #    docker push gcr.io/work-test-242205/cypress-cucumber-docker
 #  displayName: 'Build, tag & push Docker image'
+
+# Copy Files
+# Copy files from source folder to target folder using match patterns (The match patterns will only match file paths, not folder paths)
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: $(Build.SourcesDirectory)
+    contents: |
+      results/**/*.*
+    targetFolder: $(Build.ArtifactStagingDirectory)
+    #cleanTargetFolder: false # Optional
+    #overWrite: false # Optional
+    #flattenFolders: false # Optional
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: UI-test-screenshots-and-video
