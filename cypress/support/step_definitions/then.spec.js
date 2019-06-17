@@ -10,6 +10,7 @@ import checkSelected from './check/checkSelected'
 import checkElementExists from './check/checkElementExists'
 import pending from './lib/pending'
 import isExisting from './check/isExisting'
+import checkEqualsText from './check/checkEqualsText'
 
 Then(
   /^I expect that the title is( not)* "([^"]*)?"$/,
@@ -56,8 +57,7 @@ Then(
 
 Then(
   /^I expect that (button|element) "([^"]*)?"( not)* matches the text "([^"]*)?"$/,
-  // checkEqualsText
-  pending
+  checkEqualsText
 )
 
 Then(
