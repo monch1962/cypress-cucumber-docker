@@ -25,5 +25,13 @@ Feature: Facebook
     Given the element "#u_0_15" is enabled
     Then I expect that element "#u_0_15" is enabled
 
+  Scenario: Check the 'Auto Remove Recent Logins with FBP' is not selected
+    Given the element "#rmrecentlogins" is not selected
+    Then I expect that element "#rmrecentlogins" is not selected
+
+  Scenario: Check the 'Auto Remove Recent Logins with FBP' is not checked
+    Given the checkbox "#rmrecentlogins" is not checked
+    Then I expect that checkbox "#rmrecentlogins" is not checked
+
   #Scenario: pending step - still to be developed
   #  Then I expect that a alertbox is not opened
