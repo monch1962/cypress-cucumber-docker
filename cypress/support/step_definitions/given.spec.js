@@ -8,6 +8,7 @@ import checkSelected from './check/checkSelected'
 import checkElementExists from './check/checkElementExists'
 import checkTitle from './check/checkTitle'
 import checkEqualsText from './check/checkEqualsText'
+import checkUrl from './check/checkUrl'
 import pending from './lib/pending'
 
 Given(
@@ -76,8 +77,7 @@ Given(
 
 Given(
   /^the page url is( not)* "([^"]*)?"$/,
-  // checkUrl
-  pending
+  checkUrl
 )
 
 Given(
