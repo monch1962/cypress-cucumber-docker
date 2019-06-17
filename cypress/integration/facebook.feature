@@ -58,8 +58,9 @@ Feature: Facebook
 
   Scenario: Move between fields on the page
     When I click on the element "#u_0_l"
-    And I set "abc123" to the inputfield "#u_0_l"
-    And I add "def456" to the inputfield "#u_0_l"
+    And I set "Firstname" to the inputfield "#u_0_l"
+    And I add "Lastname" to the inputfield "#u_0_n"
+    And I add "me@somesite.com" to the inputfield "#u_0_q"
     
   #Scenario: pending step - still to be developed
   #  Then I expect that a alertbox is not opened
