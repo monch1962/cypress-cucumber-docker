@@ -55,5 +55,11 @@ Feature: Facebook
     And the element ".fwn" contains not the same text as element "#terms-link"
     Then I expect that element ".fwn" contains the same text as element ".fwn"
     And I expect that element ".fwn" contains not the same text as element "#terms-link"
+
+  Scenario: Move between fields on the page
+    When I click on the element "#u_0_1"
+    And I set "abc123" to the inputfield "#u_0_1"
+    And I add "def456" to the inputfield "#u_0_1"
+    
   #Scenario: pending step - still to be developed
   #  Then I expect that a alertbox is not opened
