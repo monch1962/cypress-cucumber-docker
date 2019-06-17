@@ -4,6 +4,7 @@ import { Given } from 'cypress-cucumber-preprocessor/steps'
 import openWebsite from './actions/openWebsite'
 import isVisible from './check/isVisible'
 import isEnabled from './check/isEnabled'
+import checkSelected from './check/checkSelected'
 import checkTitle from './check/checkTitle'
 import pending from './lib/pending'
 
@@ -24,14 +25,12 @@ Given(
 
 Given(
   /^the element "([^"]*)?" is( not)* selected$/,
-  // checkSelected
-  pending
+  checkSelected
 )
 
 Given(
   /^the checkbox "([^"]*)?" is( not)* checked$/,
-  // checkSelected
-  pending
+  checkSelected
 )
 
 Given(

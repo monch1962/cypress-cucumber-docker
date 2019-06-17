@@ -6,6 +6,7 @@ import checkTitleContains from './check/checkTitleContains'
 import checkIfElementExists from './lib/checkIfElementExists'
 import isVisible from './check/isVisible'
 import isEnabled from './check/isEnabled'
+import checkSelected from './check/checkSelected'
 import pending from './lib/pending'
 
 Then(
@@ -108,14 +109,12 @@ Then(
 
 Then(
   /^I expect that checkbox "([^"]*)?" is( not)* checked$/,
-  // checkSelected
-  pending
+  checkSelected
 )
 
 Then(
   /^I expect that element "([^"]*)?" is( not)* selected$/,
-  // checkSelected
-  pending
+  checkSelected
 )
 
 Then(
