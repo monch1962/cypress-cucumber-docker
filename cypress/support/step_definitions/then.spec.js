@@ -5,6 +5,7 @@ import checkTitle from './check/checkTitle'
 import checkTitleContains from './check/checkTitleContains'
 import checkIfElementExists from './lib/checkIfElementExists'
 import isVisible from './check/isVisible'
+import isEnabled from './check/isEnabled'
 import pending from './lib/pending'
 
 Then(
@@ -119,8 +120,7 @@ Then(
 
 Then(
   /^I expect that element "([^"]*)?" is( not)* enabled$/,
-  // isEnabled
-  pending
+  isEnabled
 )
 
 Then(

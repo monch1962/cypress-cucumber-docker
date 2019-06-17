@@ -23,6 +23,7 @@ Feature: Facebook
 
   Scenario: Check the submit button is enabled
     Given the element "#u_0_15" is enabled
+    Then I expect that element "#u_0_15" is enabled
 
   #Scenario: pending step - still to be developed
   #  Then I expect that a alertbox is not opened

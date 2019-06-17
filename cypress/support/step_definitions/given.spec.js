@@ -20,7 +20,6 @@ Given(
 Given(
   /^the element "([^"]*)?" is( not)* enabled$/,
   isEnabled
-  // pending
 )
 
 Given(
