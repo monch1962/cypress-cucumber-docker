@@ -44,3 +44,9 @@ steps:
   inputs:
     'testResultsFormat': JUnit
     'testResultsFiles': results/**/*.xml
+
+- script: |
+    docker build . -t ccd
+    docker tag ccd:latest gcr.io/cypress-cucumber-docker
+    docker push gcr.io/cypress-cucumber-docker
+  displayName: 'Build Docker image'
