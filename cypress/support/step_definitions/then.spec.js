@@ -7,7 +7,9 @@ import checkIfElementExists from './lib/checkIfElementExists'
 import isVisible from './check/isVisible'
 import isEnabled from './check/isEnabled'
 import checkSelected from './check/checkSelected'
+import checkElementExists from './check/checkElementExists'
 import pending from './lib/pending'
+import isExisting from './check/isExisting'
 
 Then(
   /^I expect that the title is( not)* "([^"]*)?"$/,
@@ -43,8 +45,7 @@ Then(
 
 Then(
   /^I expect that element "([^"]*)?" does( not)* exist$/,
-  // isExisting
-  pending
+  isExisting
 )
 
 Then(

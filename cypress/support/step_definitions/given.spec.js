@@ -5,6 +5,7 @@ import openWebsite from './actions/openWebsite'
 import isVisible from './check/isVisible'
 import isEnabled from './check/isEnabled'
 import checkSelected from './check/checkSelected'
+import checkElementExists from './check/checkElementExists'
 import checkTitle from './check/checkTitle'
 import pending from './lib/pending'
 
@@ -35,8 +36,7 @@ Given(
 
 Given(
   /^there is (an|no) element "([^"]*)?" on the page$/,
-  // checkElementExists
-  pending
+  checkElementExists
 )
 
 Given(

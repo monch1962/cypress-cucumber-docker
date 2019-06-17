@@ -33,5 +33,12 @@ Feature: Facebook
     Given the checkbox "#rmrecentlogins" is not checked
     Then I expect that checkbox "#rmrecentlogins" is not checked
 
+  Scenario: The Facebook logo should exist
+    Given there is an element ".fb_logo" on the page
+  
+  Scenario: Check the existence of some page elements
+    Then I expect that element ".fb_logo" does exist
+    And I expect that element "#xyzzy" does not exist
+
   #Scenario: pending step - still to be developed
   #  Then I expect that a alertbox is not opened
