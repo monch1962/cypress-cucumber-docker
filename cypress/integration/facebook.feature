@@ -50,5 +50,10 @@ Feature: Facebook
     Then I expect that the url is "https://www.facebook.com/"
     And I expect that the url is not "https://asdf/asdf/asdf/asdf"
 
+  Scenario: Compare text content between elements
+    Given the element ".fwn" contains the same text as element ".fwn"
+    And the element ".fwn" contains not the same text as element "#terms-link"
+    Then I expect that element ".fwn" contains the same text as element ".fwn"
+    And I expect that element ".fwn" contains not the same text as element "#terms-link"
   #Scenario: pending step - still to be developed
   #  Then I expect that a alertbox is not opened

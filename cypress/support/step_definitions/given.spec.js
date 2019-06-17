@@ -9,6 +9,7 @@ import checkElementExists from './check/checkElementExists'
 import checkTitle from './check/checkTitle'
 import checkEqualsText from './check/checkEqualsText'
 import checkUrl from './check/checkUrl'
+import compareText from './check/compareText'
 import pending from './lib/pending'
 
 Given(
@@ -48,8 +49,7 @@ Given(
 
 Given(
   /^the element "([^"]*)?" contains( not)* the same text as element "([^"]*)?"$/,
-  // compareText
-  pending
+  compareText
 )
 
 Given(

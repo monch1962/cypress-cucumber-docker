@@ -7,7 +7,7 @@ import checkIfElementExists from './lib/checkIfElementExists'
 import isVisible from './check/isVisible'
 import isEnabled from './check/isEnabled'
 import checkSelected from './check/checkSelected'
-import checkElementExists from './check/checkElementExists'
+import compareText from './check/compareText'
 import pending from './lib/pending'
 import isExisting from './check/isExisting'
 import checkUrl from './check/checkUrl'
@@ -51,9 +51,8 @@ Then(
 )
 
 Then(
-  /^I expect that element "([^"]*)?"( not)* contains the same text as element "([^"]*)?"$/,
-  // compareText
-  pending
+  /^I expect that element "([^"]*)?" contains( not)* the same text as element "([^"]*)?"$/,
+  compareText
 )
 
 Then(
