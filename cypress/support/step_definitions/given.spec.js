@@ -7,6 +7,7 @@ import isEnabled from './check/isEnabled'
 import checkSelected from './check/checkSelected'
 import checkElementExists from './check/checkElementExists'
 import checkTitle from './check/checkTitle'
+import checkEqualsText from './check/checkEqualsText'
 import pending from './lib/pending'
 
 Given(
@@ -52,8 +53,7 @@ Given(
 
 Given(
   /^the (button|element) "([^"]*)?"( not)* matches the text "([^"]*)?"$/,
-  // checkEqualsText
-  pending
+  checkEqualsText
 )
 
 Given(

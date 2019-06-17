@@ -40,5 +40,9 @@ Feature: Facebook
     Then I expect that element ".fb_logo" does exist
     And I expect that element "#xyzzy" does not exist
 
+  Scenario: Check text content of a page element
+    Given the element ".fwn" matches the text "It's free and always will be."
+    Then I expect that element ".fwn" matches the text "It's free and always will be."
+
   #Scenario: pending step - still to be developed
   #  Then I expect that a alertbox is not opened
