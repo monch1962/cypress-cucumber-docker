@@ -58,8 +58,8 @@ Feature: Facebook
 
   Scenario: Move between fields on the page
     When I click on the element "#u_0_1"
-    And I set "abc123" to the inputfield "#u_0_1"
-    And I add "def456" to the inputfield "#u_0_1"
+    And I set "abc123" to the inputfield "#u_0_l"
+    And I add "def456" to the inputfield "#u_0_l"
     
   #Scenario: pending step - still to be developed
   #  Then I expect that a alertbox is not opened
