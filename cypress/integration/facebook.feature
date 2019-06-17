@@ -57,7 +57,7 @@ Feature: Facebook
     And I expect that element ".fwn" contains not the same text as element "#terms-link"
 
   Scenario: Move between fields on the page
-    When I click on the element "#u_0_1"
+    When I click on the element "#u_0_l"
     And I set "abc123" to the inputfield "#u_0_l"
     And I add "def456" to the inputfield "#u_0_l"
     
