@@ -7,9 +7,14 @@ import checkIfElementExists from '../lib/checkIfElementExists';
  * @param  {String}   element Element selector
  */
 module.exports = (action, type, element) => {
+    if (element.startsWith("./") || element.startsWith("/")) { // If element starts with either '//' or './/' treat it as an XPath
+        cy.xpath(element).as("el")
+    } else {
+        cy.get(element).as("el")
+    }
     if (action === 'click') {
-        cy.get(element).click()
+        cy.get("@el").click()
     } else if (action === 'doubleclick') {
-        cy.get(element).dblclick()
+        cy.get("@el").dblclick()
     }
 }
