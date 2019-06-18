@@ -54,7 +54,7 @@ Then(
 )
 
 Then(
-  /^I expect that (button|element) "([^"]*)?"( not)* matches the text "([^"]*)?"$/,
+  /^I expect that (button|element) ("([^"]*)?"|'([^']*)?')( not)* matches the text "([^"]*)?"$/,
   checkEqualsText
 )
 
@@ -77,7 +77,7 @@ Then(
 )
 
 Then(
-  /^I expect that the url is( not)* "([^"]*)?"$/,
+  /^I expect that the url is( not)* ("([^"]*)?"|'([^']*)?')$/,
   checkUrl
 )
 

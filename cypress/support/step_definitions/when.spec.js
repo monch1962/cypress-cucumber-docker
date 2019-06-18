@@ -9,12 +9,12 @@ When(
 )
 
 When(
-    /^I (add|set) "([^"]*)?" to the inputfield "([^"]*)?"$/,
+    /^I (add|set) "([^"]*)?" to the inputfield ("([^"]*)?"|'([^']*)?')$/,
     setInputField
 )
 
 When(
-    /^I clear the inputfield "([^"]*)?"$/,
+    /^I clear the inputfield ("([^"]*)?"|'([^']*)?')$/,
     // clearInputField
     pending
 )
@@ -26,7 +26,7 @@ When(
 )
 
 When(
-    /^I submit the form "([^"]*)?"$/,
+    /^I submit the form ("([^"]*)?"|'([^']*)?')$/,
     // submitForm
     pending
 )
@@ -38,7 +38,7 @@ When(
 )
 
 When(
-    /^I set a cookie "([^"]*)?" with the content "([^"]*)?"$/,
+    /^I set a cookie "([^"]*)?" with the content ("([^"]*)?"|'([^']*)?')$/,
     // setCookie
     pending
 )
@@ -68,7 +68,7 @@ When(
 )
 
 When(
-    /^I scroll to element "([^"]*)?"$/,
+    /^I scroll to element ("([^"]*)?"|'([^']*)?')$/,
     // scroll
     pending
 )

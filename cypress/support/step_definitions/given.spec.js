@@ -6,6 +6,7 @@ import checkSelected from './check/checkSelected'
 import checkElementExists from './check/checkElementExists'
 import checkTitle from './check/checkTitle'
 import checkEqualsText from './check/checkEqualsText'
+import clickElement from './actions/clickElement'
 import checkUrl from './check/checkUrl'
 import compareText from './check/compareText'
 import pending from './lib/pending'
@@ -13,6 +14,11 @@ import pending from './lib/pending'
 Given(
   /^I open the (url|site) "([^"]*)?"$/,
   openWebsite
+)
+
+Given(
+  /^I (click|doubleclick) on the (link|button|element) ("([^"]*)?"|'([^']*)?')$/,
+  clickElement
 )
 
 Given(

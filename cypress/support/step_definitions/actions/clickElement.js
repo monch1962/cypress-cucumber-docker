@@ -6,8 +6,8 @@ import checkIfElementExists from '../lib/checkIfElementExists';
  * @param  {String}   type    Type of the element (link or selector)
  * @param  {String}   element Element selector
  */
-module.exports = (action, type, element, _, elementNoDelims) => {
-    if (element.startsWith(".//") || element.startsWith("//")) { // If element starts with either '//' or './/' treat it as an XPath
+module.exports = (action, type, element) => {
+    if (element.startsWith("./") || element.startsWith("/")) { // If element starts with either '//' or './/' treat it as an XPath
         cy.xpath(element).as("el")
     } else {
         cy.get(element).as("el")
