@@ -1,12 +1,10 @@
-/// <reference types="Cypress" />
-
 import { When } from 'cypress-cucumber-preprocessor/steps'
 import pending from './lib/pending'
 import clickElement from './actions/clickElement'
 import setInputField from './actions/setInputField'
 
 When(
-    /^I (click|doubleclick) on the (link|button|element) "([^"]*)?"$/,
+    /^I (click|doubleclick) on the (link|button|element) ("([^"]*)?"|'([^']*)?')$/,
     clickElement
 )
 
