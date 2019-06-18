@@ -23,6 +23,19 @@ To run supplying your own feature file/s, assuming they're in `./cypress/integra
 
 `$ docker run -v "$(pwd)/results:/results" -v "$(pwd)/cypress/integration:/cypress/integration" ccd:latest`
 
+### To run/debug on your local system
+
+First bring in all the library files
+
+`$ npm install`
+
+Then run either with browser via the Cypress UI (very handy while writing and debugging tests)
+
+`$ npm run cypress-open`
+
+or headless, as will be the case when test run inside the container
+
+`$npm run cypress-run`
 
 
 

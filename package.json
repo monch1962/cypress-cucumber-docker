@@ -6,7 +6,8 @@
   "scripts": {
     "test": "nyc report --report cobertura",
     "cypress-verify": "cypress verify",
-    "cypress-run": "cypress run"
+    "cypress-run": "cypress run",
+    "cypress-open": "cypress open"
   },
   "keywords": [
     "cypress",
