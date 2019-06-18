@@ -1,5 +1,3 @@
-/// <reference types="Cypress" />
-
 module.exports = (element, falseCase, exactly) => {
   // cy.get(element).should('have.length', exactly)
   // if (falseCase === true) {
