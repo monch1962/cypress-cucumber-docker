@@ -35,7 +35,7 @@ Then run either with browser via the Cypress UI (very handy while writing and de
 
 or headless, as will be the case when test run inside the container
 
-`$npm run cypress-run`
+`$ npm run cypress-run`
 
 
 
