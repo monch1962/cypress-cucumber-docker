@@ -2,5 +2,8 @@
     "extends": "plugin:prettier/recommended",
     "settings": {
         "indent": 2
+    },
+    "globals": {
+        "cy": true
     }
 }
