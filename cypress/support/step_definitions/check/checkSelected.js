@@ -1,8 +1,7 @@
 module.exports = (element, falseCase) => {
     if (falseCase) {
-      cy.get(element).should('not.be.selected')
+        cy.get(element).should('not.be.selected')
     } else {
-      cy.get(element).should('be.selected')
+        cy.get(element).should('be.selected')
     }
-  }
-  
+}

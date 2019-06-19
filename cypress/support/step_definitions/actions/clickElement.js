@@ -1,4 +1,4 @@
-import checkIfElementExists from '../lib/checkIfElementExists';
+// import checkIfElementExists from '../lib/checkIfElementExists'
 
 /**
  * Perform an click action on the given element
@@ -7,14 +7,18 @@ import checkIfElementExists from '../lib/checkIfElementExists';
  * @param  {String}   element Element selector
  */
 module.exports = (action, type, element) => {
-    if (element.startsWith("./") || element.startsWith("/")) { // If element starts with either '//' or './/' treat it as an XPath
-        cy.xpath(element).as("el")
+    if (element.startsWith('./') || element.startsWith('/')) { // If element starts with either '//' or './/' treat it as an XPath
+        cy.xpath(element).as('el')
     } else {
-        cy.get(element).as("el")
+        cy.get(element).as('el')
     }
     if (action === 'click') {
-        cy.get("@el").click()
-    } else if (action === 'doubleclick') {
-        cy.get("@el").dblclick()
+        cy.get('@el').click({
+            force: true
+        })
+    } else {
+        cy.get('@el').dblclick({
+            force: true
+        })
     }
 }
