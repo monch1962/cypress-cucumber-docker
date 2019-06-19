@@ -11,7 +11,9 @@ A screenshot is taken at the end of each test execution, and a MP4 video is capt
 Results are captured in JUnit format, and written both to file and to the console
 
 ## Instructions
-To build a container image
+
+### Setting up to run tests inside containers
+To build a container image locally
 
 `$ docker build . -t ccd`
 
@@ -23,21 +25,31 @@ To run supplying your own feature file/s, assuming they're in `./cypress/integra
 
 `$ docker run -v "$(pwd)/results:/results" -v "$(pwd)/cypress/integration:/cypress/integration" ccd:latest`
 
-### To run/debug on your local system
+### To run/debug tests on your local system (not inside containers)
 
-First bring in all the library files
+First install all the dependency files
 
 `$ npm install`
 
-Then run either with browser via the Cypress UI (very handy while writing and debugging tests)
+Now you've got 2 options - either run the tests headless (which is a fairly close simulation of how they'll run inside containers, or within CI) or run them with full visibility. Running tests with full visibility (i.e. not headless) is very handy while you're building and debugging tests cases; get them working non-headless, then ensure they still work headless, then copy them where CI can run them.
 
-`$ npm run cypress-open`
-
-or headless, as will be the case when test run inside the container
+#### Headless
 
 `$ npm run cypress-run`
 
+#### Run with full visibility inside browser
+`$ npm run cypress-open`
 
+You'll then see a window popup that looks something like this ![](./doc-images/cypress-screenshot.png)
+Note that your feature files are highlighted - if you click on one of them, it'll run inside and you can view the results.
+
+The results will look something like this ![](./doc-images/cypress-test-execution.png) with the steps of your test case on the left hand side and a browser viewport on the right hand side.
+
+You can then click on the various links on the left hand side, and the browser viewport will change to align with what the browser "could see" at the point that step in your test was executed.
+
+You can also interact with the browser viewport at the same time. The following screenshot ![](./doc-images/cypress-test-debugging.png) shows a step in the test highlighted (and thus the browser view is aligned to the point where that test was executed), then I've right-clicked on the browser viewport and selected "Inspect" so I can see a view of the HTML & DOM of the page at that point in time.
+
+...This is probably the best experience available for debugging browser automation tests!
 
 
 
