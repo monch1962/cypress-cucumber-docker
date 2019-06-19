@@ -1,4 +1,6 @@
-import { Then } from 'cypress-cucumber-preprocessor/steps'
+import {
+  Then
+} from 'cypress-cucumber-preprocessor/steps'
 import checkTitle from './check/checkTitle'
 import checkTitleContains from './check/checkTitleContains'
 import checkIfElementExists from './lib/checkIfElementExists'
@@ -54,7 +56,7 @@ Then(
 )
 
 Then(
-  /^I expect that (button|element) ("([^"]*)?"|'([^']*)?')( not)* matches the text "([^"]*)?"$/,
+  /^I expect that (button|element) ("([^"]*)?"|'([^']*)?')( not)* matches the text ("([^"]*)?"|'([^']*)?')$/,
   checkEqualsText
 )
 

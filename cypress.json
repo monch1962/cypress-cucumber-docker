@@ -1,20 +1,19 @@
 {
-    "baseUrl": "http://example.com",
-    "defaultCommandTimeout": 8000,
-    "execTimeout": 60000,
-    "taskTimeout": 60000,
-    "pageLoadTimeout": 60000,
-    "requestTimeout": 5000,
-    "responseTimeout": 30000,
-    "screenshotsFolder": "./results/screenshots",
-    "videosFolder": "./results/videos",
-    "videoCompression": false,
-    "video": true,
-    "videoUploadOnPasses": true,
-    "trashAssetsBeforeRuns": true,
-    "reporter": "junit",
-    "reporterOptions": {
-      "mochaFile": "./results/test-output-[hash].xml",
-      "toConsole": true
-    }
+  "defaultCommandTimeout": 8000,
+  "execTimeout": 30000,
+  "taskTimeout": 30000,
+  "pageLoadTimeout": 30000,
+  "requestTimeout": 5000,
+  "responseTimeout": 30000,
+  "screenshotsFolder": "./results/screenshots",
+  "videosFolder": "./results/videos",
+  "videoCompression": false,
+  "video": true,
+  "videoUploadOnPasses": true,
+  "trashAssetsBeforeRuns": true,
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "./results/test-output-[hash].xml",
+    "toConsole": true
+  }
 }

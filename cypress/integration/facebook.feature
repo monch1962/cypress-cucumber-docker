@@ -7,13 +7,13 @@ Feature: Facebook
     Given the element ".mbs" is visible
 
   Scenario: Check the page title is correct
-    Then I expect that the title is "Facebook - log in or sign up"
+    Then I expect that the title is "Facebook – log in or sign up"
 
   Scenario: Check the page title contains Facebook
     Then I expect that the title contains "Facebook"
   
-  Scenario: Check the page title doesn't contains Facebook1
-    Then I expect that the title not contains "Facebook1"
+  Scenario: Check the page title doesn't contains FacebookWRONG
+    Then I expect that the title not contains "FacebookWRONG"
   
   #Scenario: Check the page has 1 button
   #  Then I expect that element "#u_0_15" does appear exactly 1 times

@@ -1,15 +1,23 @@
-import { When } from 'cypress-cucumber-preprocessor/steps'
+import {
+    When
+} from 'cypress-cucumber-preprocessor/steps'
 import pending from './lib/pending'
 import clickElement from './actions/clickElement'
+import clickElementContainingText from './actions/clickElementContainingText'
 import setInputField from './actions/setInputField'
 
 When(
-    /^I (click|doubleclick) on the (link|button|element) ("([^"]*)?"|'([^']*)?')$/,
+    /^I (click|doubleclick) on the (link|button|element|dropdown) ("([^"]*)?"|'([^']*)?')$/,
     clickElement
 )
 
 When(
-    /^I (add|set) "([^"]*)?" to the inputfield ("([^"]*)?"|'([^']*)?')$/,
+    /^I (click|doubleclick) on the (link|button|element|dropdown) containing text ("([^"]*)?"|'([^']*)?')$/,
+    clickElementContainingText
+)
+
+When(
+    /^I (add|set) ("([^"]*)?"|'([^']*)?') to the inputfield ("([^"]*)?"|'([^']*)?')$/,
     setInputField
 )
 

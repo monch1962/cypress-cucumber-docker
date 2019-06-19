@@ -8,9 +8,15 @@ import checkIfElementExists from '../lib/checkIfElementExists';
  * @param  {String}   element Element selector
  */
 module.exports = (method, value, element) => {
+    if (element.startsWith('./') || element.startsWith('/')) { // If element starts with either '//' or './/' treat it as an XPath
+        cy.xpath(element).as('el')
+    } else {
+        cy.get(element).as('el')
+    }
+
     var existingText = ''
     if (method === 'add') {
-        existingText = cy.get(element).invoke('text')
+        existingText = cy.get("@el").invoke('text')
     }
-    cy.get(element).type(value)
+    cy.get("@el").type(value)
 }
