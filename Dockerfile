@@ -1,5 +1,6 @@
 FROM cypress/base:10
 
+ENV CYPRESS 1
 COPY package.json package.json
 RUN npm install
 # RUN npm install --save-dev cypress cypress-cucumber-preprocessor cypress-image-snapshot cypress-junit-reporter
