@@ -14,44 +14,44 @@ import checkUrl from './check/checkUrl'
 import checkEqualsText from './check/checkEqualsText'
 
 Then(
-  /^I expect that the title is( not)* "([^"]*)?"$/,
+  /^I expect that the title is( not)* ("([^"]*)?"|'([^']*)?')$/,
   checkTitle
 )
 
 Then(
-  /^I expect that the title( not)* contains "([^"]*)?"$/,
+  /^I expect that the title( not)* contains ("([^"]*)?"|'([^']*)?')$/,
   checkTitleContains
 )
 
 Then(
-  /^I expect that element "([^"]*)?" does( not)* appear exactly "([^"]*)?" times$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?')" does( not)* appear exactly ("([^"]*)?"|'([^']*)?') times$/,
   checkIfElementExists
 )
 
 Then(
-  /^I expect that element "([^"]*)?" is( not)* visible$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') is( not)* visible$/,
   isVisible
 )
 
 Then(
-  /^I expect that element "([^"]*)?" becomes( not)* visible$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') becomes( not)* visible$/,
   // waitForVisible
   pending
 )
 
 Then(
-  /^I expect that element "([^"]*)?" is( not)* within the viewport$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') is( not)* within the viewport$/,
   // checkWithinViewport
   pending
 )
 
 Then(
-  /^I expect that element "([^"]*)?" does( not)* exist$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') does( not)* exist$/,
   isExisting
 )
 
 Then(
-  /^I expect that element "([^"]*)?" contains( not)* the same text as element "([^"]*)?"$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') contains( not)* the same text as element ("([^"]*)?"|'([^']*)?')$/,
   compareText
 )
 
@@ -61,19 +61,19 @@ Then(
 )
 
 Then(
-  /^I expect that (button|element) "([^"]*)?"( not)* contains the text "([^"]*)?"$/,
+  /^I expect that (button|element) ("([^"]*)?"|'([^']*)?')( not)* contains the text ("([^"]*)?"|'([^']*)?')$/,
   // checkContainsText
   pending
 )
 
 Then(
-  /^I expect that (button|element) "([^"]*)?"( not)* contains any text$/,
+  /^I expect that (button|element) ("([^"]*)?"|'([^']*)?')( not)* contains any text$/,
   // checkContainsAnyText
   pending
 )
 
 Then(
-  /^I expect that (button|element) "([^"]*)?" is( not)* empty$/,
+  /^I expect that (button|element) ("([^"]*)?"|'([^']*)?') is( not)* empty$/,
   // checkIsEmpty
   pending
 )
@@ -84,19 +84,19 @@ Then(
 )
 
 Then(
-  /^I expect that the path is( not)* "([^"]*)?"$/,
+  /^I expect that the path is( not)* ("([^"]*)?"|'([^']*)?')$/,
   // checkURLPath
   pending
 )
 
 Then(
-  /^I expect the url to( not)* contain "([^"]*)?"$/,
+  /^I expect the url to( not)* contain ("([^"]*)?"|'([^']*)?')$/,
   // checkInURLPath
   pending
 )
 
 Then(
-  /^I expect that the( css)* attribute "([^"]*)?" from element "([^"]*)?" is( not)* "([^"]*)?"$/,
+  /^I expect that the( css)* attribute ("([^"]*)?"|'([^']*)?') from element ("([^"]*)?"|'([^']*)?') is( not)* ("([^"]*)?"|'([^']*)?')$/,
   // checkProperty
   pending
 )
@@ -108,46 +108,46 @@ Then(
 )
 
 Then(
-  /^I expect that checkbox "([^"]*)?" is( not)* checked$/,
+  /^I expect that checkbox ("([^"]*)?"|'([^']*)?') is( not)* checked$/,
   checkSelected
 )
 
 Then(
-  /^I expect that element "([^"]*)?" is( not)* selected$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') is( not)* selected$/,
   checkSelected
 )
 
 Then(
-  /^I expect that element "([^"]*)?" is( not)* enabled$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') is( not)* enabled$/,
   isEnabled
 )
 
 Then(
-  /^I expect that cookie "([^"]*)?"( not)* contains "([^"]*)?"$/,
+  /^I expect that cookie ("([^"]*)?"|'([^']*)?')( not)* contains ("([^"]*)?"|'([^']*)?')$/,
   // checkCookieContent
   pending
 )
 
 Then(
-  /^I expect that cookie "([^"]*)?"( not)* exists$/,
+  /^I expect that cookie ("([^"]*)?"|'([^']*)?')( not)* exists$/,
   // checkCookieExists
   pending
 )
 
 Then(
-  /^I expect that element "([^"]*)?" is( not)* ([\d]+)px (broad|tall)$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') is( not)* ([\d]+)px (broad|tall)$/,
   // checkDimension
   pending
 )
 
 Then(
-  /^I expect that element "([^"]*)?" is( not)* positioned at ([\d]+)px on the (x|y) axis$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') is( not)* positioned at ([\d]+)px on the (x|y) axis$/,
   // checkOffset
   pending
 )
 
 Then(
-  /^I expect that element "([^"]*)?" (has|does not have) the class "([^"]*)?"$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') (has|does not have) the class ("([^"]*)?"|'([^']*)?')$/,
   // checkClass
   pending
 )
@@ -159,13 +159,13 @@ Then(
 )
 
 Then(
-  /^I expect the url "([^"]*)?" is opened in a new (tab|window)$/,
+  /^I expect the url ("([^"]*)?"|'([^']*)?') is opened in a new (tab|window)$/,
   // checkIsOpenedInNewWindow
   pending
 )
 
 Then(
-  /^I expect that element "([^"]*)?" is( not)* focused$/,
+  /^I expect that element ("([^"]*)?"|'([^']*)?') is( not)* focused$/,
   // checkFocus
   pending
 )
@@ -188,7 +188,7 @@ Then(
 )
 
 Then(
-  /^I expect that a (alertbox|confirmbox|prompt)( not)* contains the text "([^"]*)?"$/,
+  /^I expect that a (alertbox|confirmbox|prompt)( not)* contains the text ("([^"]*)?"|'([^']*)?')$/,
   // checkModalText
   pending
 )
