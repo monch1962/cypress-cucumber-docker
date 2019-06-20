@@ -26,6 +26,10 @@ To run supplying your own feature file/s, assuming they're in `./cypress/integra
 
 `$ docker run -v "$(pwd)/results:/results" -v "$(pwd)/cypress/integration:/cypress/integration" --ipc=host ccd:latest`
 
+To run supplying your own feature file/s, assuming they're in `./cypress/integration`, AND a set of your own custom step implementations, assuming they're in `./cypress/support/step_definitions/custom`
+
+`$ docker run -v "$(pwd)/results:/results" -v "$(pwd)/cypress/integration:/cypress/integration" -v "$(pwd)/cypress/support/step_definitions/custom:/cypress/support/step_definitions/custom" --ipc=host ccd:latest`
+
 ### To run/debug tests on your local system (not inside containers)
 
 First install all the dependency files
