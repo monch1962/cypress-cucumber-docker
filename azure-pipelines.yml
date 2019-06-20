@@ -40,7 +40,7 @@ steps:
     npm run test-webserver &
     WEBSERVER_PID=$!
     $(npm bin)/cypress run
-    if [ $? -ne 0 ]; then kill $APP_PID && exit 1; fi
+    if [ $? -ne 0 ]; then kill $WEBSERVER_PID && exit 1; fi
     kill $WEBSERVER_PID
   displayName: 'Run Cypress/Cucumber tests'
 
