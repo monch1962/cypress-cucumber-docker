@@ -14,6 +14,7 @@ module.exports = (method, value, element) => {
         cy.get(element).as('el')
     }
 
+    cy.get("@el").scrollIntoView()
     var existingText = ''
     if (method === 'add') {
         existingText = cy.get("@el").invoke('text')
